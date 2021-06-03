@@ -1,7 +1,7 @@
 # Tugas-Akhir-Metnum-Kelompok-11
 Repositori ini dibuat untuk memenuhi Tugas Akhir Praktikum Metode Numerik Oseanografi 2021. Repositori ini memuat executable (.exe) file yang dapat memproses beberapa persamaan metode numerik untuk penyelesaian perhitungan numerik. Pengerjaan untuk repositori kali ini menggunakan bahasa pemrograman python yang dapat dilakukan pada beberapa platform seperti Google Colaboratory dan Jupyter Notebook. Sedangkan untuk library yang digunakan kali ini adalah Numpy, Matplotlib, IPython, Scipy, Pprint, dan Math. Seluruh script yang dibuat adalah hasil kelompok 11 Oseanografi 2019. Semoga dapat bermanfaat!
 
-### AUTHOR (KELOMPOK 11)
+### 1. AUTHOR (KELOMPOK 11)
 1. Rachel Maelisa Damanik 26050119120017 A
 2. Siti Wulandari 26050119120016 B
 3. Jane E.V. Siahaan 26050119120015 B
@@ -14,17 +14,19 @@ Repositori ini dibuat untuk memenuhi Tugas Akhir Praktikum Metode Numerik Oseano
 10. Dara Sartika 26050119120007 B
 11. Adella Eka Wardani 26050119120005 B
 
-### Cara Penggunaan
+### 2. Cara Penggunaan
 
-### Metode Pengerjaan
+### 3. Metode Pengerjaan
 1. Modul 2: Akar-akar Persamaan
 2. Modul 3: Sistem Persamaan Linear dan Matrix
 3. Modul 4: Integrasi Numerik
 4. Modul 5: Persamaan Differensial Biasa
 
-#### Modul 3 : Persamaan Linear dan Matrix
+#### 3.2. Modul 3 : Persamaan Linear dan Matrix
 * ##### Metode Gauss
 Metode eliminasi Gauss adalah suatu cara mengoperasikan nilai-nilai di dalam matriks menjadi matriks yang lebih sederhana dan banyak digunakan dalam penyelesaian sistem persamaan linier. Prosedur penyelesaian dari metode ini adalah dengan melakukan operasi baris menjadi matriks eselon-baris. Metode ini mengubah persamaan linear tersebut ke dalam matriks augmentasi dan mengoperasikannya. Metode eliminasi gauss termasuk dalam metode penyelesaian persamaan linear dengan cara langsung. Inti dari metode ini adalah membawa persamaan kedalam bentuk matriks dan menyederhanakan matriks menjadi bentuk segitiga atas. Setelah mendapat bentuk matriks tersebut dilakukan subtitusi balik untuk mendapat nilai dari akar persamaan tadi. 
+Contoh persamaan untuk metode Gauss
+
 
 * ##### Metode Gauss - Jordan
 Metode eliminasi Gauss-Jordan adalah pengembangan dari eliminasi Gauss yang hasilnya lebih sederhana lagi. Caranya adalah dengan meneruskan operasi baris dari eliminasi Gauss sehingga menghasilkan matriks yang Eselon-baris. Ini juga dapat digunakan sebagai salah satu metode penyelesaian persamaan linear dengan menggunakan matriks. Metode ini digunakan untuk mencari invers dari sebuah matriks. Prosedur umum untuk metode eliminasi Gauss-Jordan ini adalah:
@@ -37,7 +39,7 @@ Metode iterasi Gauss-Seidel adalah metode yang menggunakan proses iterasi hingga
 * ##### Metode Jacobi
 Metode iterasi Jacobi ini digunakan untuk menyelesaikan persamaan linier yang proporsi koefisien nol nya besar. Metode ini ditemukan oleh matematikawan yang berasal dari Jerman, Carl Gustav Jakob Jacobi. Penemuan ini diperkirakan pada tahun 1800-an. Iterasi dapat diartikan sebagai suatu proses atau metode yang digunakan secara berulang-ulang (pengulangan) dalam menyelesaikan suatu permasalahan matematika. 
 
-#### Modul 5 : Persamaan Diferensial Biasa
+#### 3.4. Modul 5 : Persamaan Diferensial Biasa
 * ##### Metode Heun
 Metode Heun merupakan salah satu peningkatan dari Metode Euler. Modifikasi dilakukan dengan memperkirakan kemiringan. Metode Heun merupakan perbaikan dari Metode Euler untuk meningkatkan efisiensi sehingga dapat menyelesaikan persamaan diferensial biasa dengan kondisi awal dengan mengasumsikan kemiringan tangen sebagai rata-rata dari rata-rata aritmatika dan rata-rata kontra-harmonik. Metode Heun mempunyai ketelitian yang rendah karena memiliki nilai error yang besar (sebanding dengan h). Nilai error dapat dikurangi dengan menggunakan Metode Heun yang merupakan perbaikan dari Metode Euler. Metode ini melibatkan 2 buah persamaan. Persamaan pertama disebut sebagai persamaan prediktor yang digunakan untuk memprediksi nilai integrasi awal. Persamaan kedua disebut sebagai persamaan korektor yang mengoreksi hasil integrasi awal. Pada Metode Heun, solusi Metode Euler dijadikan solusi perkiraan awal (predictor). Selanjutnya, solusi perkiraan awal ini diperbaiki dengan Metode Heun (corrector).
 Kita dapat membangun sebuah fungsi yang dapat melakukan proses integrasi menggunakan Metode Heun. Berikut adalah algoritma yang digunakan:
@@ -84,9 +86,7 @@ def heun():
     #Hasil Grafik yang didapat:
         plt.savefig('image\heun.png')
 ```
-![image](https://user-images.githubusercontent.com/85225313/120579236-602eb180-c451-11eb-9b7e-1aedb004d4fa.png)
 
-Berdasarkan hasil visualisasi dapat dilihat bahwa Metode Heun dapat dengan baik memberikan pendekatan nilai integrasi persamaan. Pembaca dapat mencoba untuk melakukan simulasi kembali dengan nilai h yang lebih kecil. Selain itu juga terdapat beberapa proses yang diubah. Seperti pada library dan pada proses penampilan grafik. Hal tersebut dikarenakan supaya gambar grafik untuk Metode Heun dan Metode Euler bisa langsung tersimpan di directory file perangkat yg kita gunakan.
 
 ### Saran Pengembangan
 1. Lebih dikreasiin lagi untuk tipe-tipe pembuatan grafik
