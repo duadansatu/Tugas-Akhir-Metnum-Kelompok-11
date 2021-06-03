@@ -432,14 +432,95 @@ def simpson1per3(x0,xn,n):
         integral = integral * h / 3
         return integral
 ```
-
 * #### Metode Simspson 3/8
 Metode Simspson 3/8 merupakan metode yang sama halnya dengan metode Simpson 1/3, hampiran nilai integrasi yanglebih teliti dapat ditingkatkan terus dengan mengunakan polinom interpolasi berderajat lebih tinggi pula. Misalkan sekarang fungsi f(x) hampiri dengan polinom interpolasi derajat 3. 
 
 Keakurasin Metode Simspson 3/8 lebih teliti dari Metode Simspson 1/3, hal ini dikarenakan Metode Simspson 3/8 memiliki polinomial interpolasi berderajat yang lebih tinggi pula.
 
 Untuk Keakurasian Metode Trapesium dan Metode Simspson, Metode Simspson jauh lebih teliti dan lebih baik, hal ini dikarenakan galatnya lebih tinggi.
-
+```
+#Pendefenisian fungsi
+def simpson3per8(x0,xn,n):
+        #Memberi keterangan
+        print(" =========================================================\n",
+              "Modul 4 Integrasi Numerik: Simpson 3/8 \n",
+              "KELOMPOK 11 \n",
+              "OSEANOGRAFI 2019 \n",
+              "PRAKTIKUM METODE NUMERIK 2021 \n",
+              "=========================================================\n")
+        f = lambda x: 3*(x**3)+3*(x**2)
+        h = (xn - x0) / n
+        integral = f(x0) + f(xn)
+        
+        #untuk pengulangan
+        for i in range(1,n):
+            k = x0 + i*h
+            if i%2 == 0:
+                integral = integral + 3 * f(k)
+            else:
+                integral = integral + 3 * f(k)
+        integral = integral * 3 * h / 8
+        return integral
+    
+    #Perintah Output (Penyelesaian integral numerik)
+    print("Kode untuk penyelesaian integrasi numerik: \n",
+         "1. Metode Trapesium 1 Pias \n",
+         "2. Metode Trapesium Banyak Pias \n",
+         "3. Metode Simpson 1/3 \n",
+         "4. Metode Simpson 3/8 \n")
+    setting = int(input("Masukkan kode penyelesaian integrasi numerik: "))
+    
+    #Bagian untuk menginput angka 1 (Pemanggilan Fungsi Trapesium Satu Pias)
+    if (setting == 1):
+        Cel = trapesium_1pias()
+    
+    #Jika Input angka 2 maka Output Trapesium banyak pias (Pemanggilan Fungsi Trapesium Banyak Pias)
+    elif (setting == 2):
+        #Pemberi keterangan
+        print(" =========================================================\n",
+              "Modul 4 Integrasi Numerik: Trapesium Banyak Pias \n",
+              "KELOMPOK 11 \n",
+              "OSEANOGRAFI 2019 \n",
+              "PRAKTIKUM METODE NUMERIK 2021 \n",
+              "=========================================================\n")
+        plt.plot(X,Y)
+        
+        #Pengulangan N dan Settingan untuk grafik serta perintah Output grafik
+        for i in range(N):
+            xs = [x[i],x[i],x[i+1],x[i+1]]
+            ys = [0,f(x[i]),f(x[i+1]),0]
+            plt.fill(xs,ys, 'b', edgecolor='b',alpha=0.2)
+        plt.title('Trapesium banyak pias, N = {}'.format(N))
+        plt.savefig('C:/TA Metnum/Images/Trapesium Banyak Pias.png')
+        L = trapesium_banyakpias(f,a,b,N)
+        print(L)
+    
+    #Pemanggilan fungsi untuk simpson 1/3
+    elif (setting == 3):
+        #Pemberi keterangan
+        print(" =========================================================\n",
+              "Modul 4 Integrasi Numerik: Simpson 1/3 \n",
+              "KELOMPOK 11 \n",
+              "OSEANOGRAFI 2019 \n",
+              "PRAKTIKUM METODE NUMERIK 2021 \n",
+              "=========================================================\n")
+        
+        #Untuk pengisian variabel x1 dan x2 serta perintah output hasil simpson 1/3
+        x1 = float(input("Batas bawah (a): "))
+        x2 = float(input("Batas atas (b): "))
+        hasil = simpson1per3(x1, x2, 10)
+        print("Nilai integral metode Simpson 1/3:", hasil)
+   
+   #Pemanggilan fungsi simpson 3.8
+   elif (setting == 4):
+        #Untuk pengisian variabel x1 dan x2 serta perintah output hasil simpson 3/8
+        x1 = float(input("Batas bawah (x1): "))
+        x2 = float(input("Batas atas (x2): "))  
+        hasil = simpson3per8(x1, x2, 3)
+        print("Nilai integral metode Simpson 3/8:", hasil)
+    else:
+        print("Periksa kembali kode yang ingin digunakan:)")
+```
 ### 3.4. Modul 5 : Persamaan Diferensial Biasa
 * #### Metode Euler
 
