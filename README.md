@@ -632,5 +632,5 @@ Demikianlah tugas akhir praktikum metode numerik ini kami buat. Seluruh authors 
 2. Rikha Widiaratih, S.Si, M.Si. selaku dosen pengampu mata kuliah Metode Numerik
 3. Aziz Rifai, S.T, M.Si. selaku dosen pengampu mata kuliah Metode Numerik
 4. Dr. Ir. Dwi Haryo Ismunarti, M.Si. selaku dosen pengampu mata kuliah Metode Numerik
-5. Tim asisten Praktikum Metode Numerik yang selalu mendampingi dalam pengerjaan tugas akhir ini
+5. Tim asisten Praktikum Metode Numerik 2021 yang selalu mendampingi dalam pengerjaan tugas akhir ini
 6. Seluruh rekan-rekan Oseanografi 2019 yang turut mendukung tersusunnya repositori ini
