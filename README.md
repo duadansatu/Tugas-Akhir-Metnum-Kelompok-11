@@ -1,4 +1,4 @@
-# Tugas Akhir Praktikum Metode Numerik Kelompok 11🌊
+ # Tugas Akhir Praktikum Metode Numerik Kelompok 11🌊
 Repositori ini dibuat untuk memenuhi Tugas Akhir Praktikum Metode Numerik Oseanografi 2021. Repositori ini memuat *executable* (.exe) file yang dapat memproses beberapa persamaan metode numerik untuk penyelesaian perhitungan numerik. Pengerjaan untuk repositori kali ini menggunakan bahasa pemrograman python yang dapat dilakukan pada beberapa platform seperti *Google Colaboratory* dan *Jupyter Notebook*. Sedangkan untuk library yang digunakan kali ini adalah *Numpy, Matplotlib, IPython, Scipy,* dan *Pprint*. Seluruh script yang dibuat adalah hasil kelompok 11 Oseanografi 2019. Semoga dapat bermanfaat!
 
 ## 1. AUTHORS (KELOMPOK 11):two_women_holding_hands:
@@ -582,6 +582,8 @@ Penggunaan Metode Euler dalam suatu fungsi untuk suatu proses integrasi. Berikut
         plt.legend(loc='lower right')
         plt.savefig('image\euler.png')
   ```
+  ![grafik euler](https://user-images.githubusercontent.com/85289398/120676827-a1aa7580-c4c0-11eb-91dc-8aae4efc4a1a.png)
+  
 * #### Metode Heun
 Metode Heun merupakan salah satu peningkatan dari Metode Euler. Modifikasi dilakukan dengan memperkirakan kemiringan. Metode Heun merupakan perbaikan dari Metode Euler untuk meningkatkan efisiensi sehingga dapat menyelesaikan persamaan diferensial biasa dengan kondisi awal dengan mengasumsikan kemiringan tangen sebagai rata-rata dari rata-rata aritmatika dan rata-rata kontra-harmonik. Metode Heun mempunyai ketelitian yang rendah karena memiliki nilai error yang besar (sebanding dengan h). Nilai error dapat dikurangi dengan menggunakan Metode Heun yang merupakan perbaikan dari Metode Euler. Metode ini melibatkan 2 buah persamaan. Persamaan pertama disebut sebagai persamaan prediktor yang digunakan untuk memprediksi nilai integrasi awal. Persamaan kedua disebut sebagai persamaan korektor yang mengoreksi hasil integrasi awal. Pada Metode Heun, solusi Metode Euler dijadikan solusi perkiraan awal (predictor). Selanjutnya, solusi perkiraan awal ini diperbaiki dengan Metode Heun (corrector).
 
