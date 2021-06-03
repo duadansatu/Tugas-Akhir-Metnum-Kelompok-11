@@ -23,6 +23,36 @@ Repositori ini dibuat untuk memenuhi Tugas Akhir Praktikum Metode Numerik Oseano
 4. Modul 5: Persamaan Differensial Biasa
 
 ### 3.1. Modul 2 : Akar-akar Persamaan
+* #### Metode Newton Rapson
+Metode Newton Rapson adalah metode pencarian akar yang sederhana dan handal dalam mendapatkan akar persamaan _non-linier_. Prosedur penyelesaian persamaan ini adalah dengan mengurangi persamaan terhadap pembagian turunan persamaan. Metode ini cukup dengan memberikan satu terkaan awal saja. Terdapat syarat yang harus dipenuhi yaitu nilai taksiran awal yang diberikan harus sedekat mungkin dengan harga eksaknya.
+
+```
+def newton_rapson(X1): #pendefinisian metode Newton Rapson
+    X1 = X1
+    iterasi = 0
+    akar = 1
+    
+    while (akar > 0.0001): #looping metode Newton Rapson
+        iterasi += 1
+        Fxn = (float(-0.0371*(X1**3)))+(float(1.5072*(X1**2)))-(9.9433*X1)+(-14.997)
+        Fxxn = (float(-0.0371*3*(X1**2)))+(float(1.5072*2*X1))-(9.9433)
+        xnp1 = X1 - (Fxn/Fxxn)
+        fxnp1 = (xnp1**3)+(xnp1**2)-(3*xnp1)-3
+        Ea = ((xnp1-X1)/xnp1)*100
+        if Ea < 0.0001: #kondisi metode newton rapson
+            X1 = xnp1
+            akar = Ea*(-1)
+        else:
+            akar = xnp1
+            print("Nilai akar adalah: ", akar)
+            print("Nilai error adalah: ", Ea)
+        if iterasi > 1000:
+            break
+        print(iterasi, "|", X1, "|", xnp1, "|", akar, "|", Ea) 
+    print("Jumlah Iterasi: ", iterasi) #perintah untuk print 
+    print("Akar persamaan adalah: ", xnp1)
+    print("Toleransi Error: ", akar)
+```
 
 ### 3.2. Modul 3 : Sistem Persamaan Linear dan Matriks
 * #### Metode Gauss
