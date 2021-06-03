@@ -1,7 +1,7 @@
 # Tugas-Akhir-Metnum-Kelompok-11
 Repositori ini dibuat untuk memenuhi Tugas Akhir Praktikum Metode Numerik Oseanografi 2021. Repositori ini memuat executable (.exe) file yang dapat memproses beberapa persamaan metode numerik untuk penyelesaian perhitungan numerik. Pengerjaan untuk repositori kali ini menggunakan bahasa pemrograman python yang dapat dilakukan pada beberapa platform seperti Google Colaboratory dan Jupyter Notebook. Sedangkan untuk library yang digunakan kali ini adalah Numpy, Matplotlib, IPython, Scipy, Pprint, dan Math. Seluruh script yang dibuat adalah hasil kelompok 11 Oseanografi 2019. Semoga dapat bermanfaat!
 
-# AUTHOR (KELOMPOK 11)
+### AUTHOR (KELOMPOK 11)
 1. Rachel Maelisa Damanik 26050119120017 A
 2. Siti Wulandari 26050119120016 B
 3. Jane E.V. Siahaan 26050119120015 B
@@ -14,16 +14,16 @@ Repositori ini dibuat untuk memenuhi Tugas Akhir Praktikum Metode Numerik Oseano
 10. Dara Sartika 26050119120007 B
 11. Adella Eka Wardani 26050119120005 B
 
-# Cara Penggunaan
+### Cara Penggunaan
 
-# Metode Pengerjaan
+### Metode Pengerjaan
 1. Modul 2: Akar-akar Persamaan
 2. Modul 3: Sistem Persamaan Linear dan Matrix
 3. Modul 4: Integrasi Numerik
 4. Modul 5: Persamaan Differensial Biasa
 
-## Modul 5 : Persamaan Diferensial Biasa
-### Metode Heun
+#### Modul 5 : Persamaan Diferensial Biasa
+##### Metode Heun
 Metode Heun merupakan salah satu peningkatan dari Metode Euler. Modifikasi dilakukan dengan memperkirakan kemiringan. Metode Heun merupakan perbaikan dari Metode Euler untuk meningkatkan efisiensi sehingga dapat menyelesaikan persamaan diferensial biasa dengan kondisi awal dengan mengasumsikan kemiringan tangen sebagai rata-rata dari rata-rata aritmatika dan rata-rata kontra-harmonik. Metode Heun mempunyai ketelitian yang rendah karena memiliki nilai error yang besar (sebanding dengan h). Nilai error dapat dikurangi dengan menggunakan Metode Heun yang merupakan perbaikan dari Metode Euler. Metode ini melibatkan 2 buah persamaan. Persamaan pertama disebut sebagai persamaan prediktor yang digunakan untuk memprediksi nilai integrasi awal. Persamaan kedua disebut sebagai persamaan korektor yang mengoreksi hasil integrasi awal. Pada Metode Heun, solusi Metode Euler dijadikan solusi perkiraan awal (predictor). Selanjutnya, solusi perkiraan awal ini diperbaiki dengan Metode Heun (corrector).
 Kita dapat membangun sebuah fungsi yang dapat melakukan proses integrasi menggunakan Metode Heun. Berikut adalah algoritma yang digunakan:
 ```
@@ -71,6 +71,6 @@ def heun():
 ```
 
 
-# Saran Pengembangan
+### Saran Pengembangan
 1. Lebih dikreasiin lagi untuk tipe-tipe pembuatan grafik
 2. Kedepannya untuk script supaya customizable
