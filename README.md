@@ -584,6 +584,8 @@ Penggunaan Metode Euler dalam suatu fungsi untuk suatu proses integrasi. Berikut
   ```
   ![grafik euler](https://user-images.githubusercontent.com/85289398/120676827-a1aa7580-c4c0-11eb-91dc-8aae4efc4a1a.png)
   
+Dari grafik hasil persamaan Euler dapat dilihat bahwa hasil pendekatannya cukup baik dan tidak jauh berbeda dengan hasil analitiknya. Grafik pada metode Euler ini, akan dihasilkan gambar yang sama juga dengan grafik metode Heun.
+
 * #### Metode Heun
 Metode Heun merupakan salah satu peningkatan dari Metode Euler. Modifikasi dilakukan dengan memperkirakan kemiringan. Metode Heun merupakan perbaikan dari Metode Euler untuk meningkatkan efisiensi sehingga dapat menyelesaikan persamaan diferensial biasa dengan kondisi awal dengan mengasumsikan kemiringan tangen sebagai rata-rata dari rata-rata aritmatika dan rata-rata kontra-harmonik. Metode Heun mempunyai ketelitian yang rendah karena memiliki nilai error yang besar (sebanding dengan h). Nilai error dapat dikurangi dengan menggunakan Metode Heun yang merupakan perbaikan dari Metode Euler. Metode ini melibatkan 2 buah persamaan. Persamaan pertama disebut sebagai persamaan prediktor yang digunakan untuk memprediksi nilai integrasi awal. Persamaan kedua disebut sebagai persamaan korektor yang mengoreksi hasil integrasi awal. Pada Metode Heun, solusi Metode Euler dijadikan solusi perkiraan awal (predictor). Selanjutnya, solusi perkiraan awal ini diperbaiki dengan Metode Heun (corrector).
 
