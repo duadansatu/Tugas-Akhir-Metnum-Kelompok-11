@@ -58,7 +58,7 @@ Contoh persamaan untuk metode Jacobi:
 * 3x1 + 9x2 + 2x3 + 5x4 = 1.802
 
 ## Modul 4 : Integrasi Numerik
-### Metode Trapesium Satu Pias
+* ### Metode Trapesium Satu Pias
 
 ```
 def trapesium_1pias():
@@ -92,7 +92,7 @@ def trapesium_1pias():
         #Perintah output hasil grafik
         print("Luas dengan metode trapesium 1 pias:", L)
 ```
-### Metode Trapesium Banyak Pias
+* ### Metode Trapesium Banyak Pias
 ```
 # PERSAMAAN 2X^3+4X^2+10
 
@@ -120,7 +120,7 @@ def trapesium_banyakpias(f,a,b,N):
     X = np.linspace(a,b+1,N)
     Y = f(X)
 ```
-### Metode Simspson 1/3
+* ### Metode Simspson 1/3
 ```
 #Pendefinisian fungsi
 def simpson1per3(x0,xn,n):
@@ -137,7 +137,9 @@ def simpson1per3(x0,xn,n):
         return integral
 ```
 ## Modul 5 : Persamaan Diferensial Biasa
-### Metode Heun
+* ### Metode Euler
+
+* ### Metode Heun
 Metode Heun merupakan salah satu peningkatan dari Metode Euler. Modifikasi dilakukan dengan memperkirakan kemiringan. Metode Heun merupakan perbaikan dari Metode Euler untuk meningkatkan efisiensi sehingga dapat menyelesaikan persamaan diferensial biasa dengan kondisi awal dengan mengasumsikan kemiringan tangen sebagai rata-rata dari rata-rata aritmatika dan rata-rata kontra-harmonik. Metode Heun mempunyai ketelitian yang rendah karena memiliki nilai error yang besar (sebanding dengan h). Nilai error dapat dikurangi dengan menggunakan Metode Heun yang merupakan perbaikan dari Metode Euler. Metode ini melibatkan 2 buah persamaan. Persamaan pertama disebut sebagai persamaan prediktor yang digunakan untuk memprediksi nilai integrasi awal. Persamaan kedua disebut sebagai persamaan korektor yang mengoreksi hasil integrasi awal. Pada Metode Heun, solusi Metode Euler dijadikan solusi perkiraan awal (predictor). Selanjutnya, solusi perkiraan awal ini diperbaiki dengan Metode Heun (corrector).
 
 Kita dapat membangun sebuah fungsi yang dapat melakukan proses integrasi menggunakan Metode Heun. Berikut adalah algoritma yang digunakan:
@@ -187,6 +189,8 @@ def heun():
 ![image](https://user-images.githubusercontent.com/85225313/120581960-e0efac80-c455-11eb-9c46-7b475e47cfb3.png)
 
 Berdasarkan hasil visualisasi dapat dilihat bahwa Metode Heun dapat dengan baik memberikan pendekatan nilai integrasi persamaan. Pembaca dapat mencoba untuk melakukan simulasi kembali dengan nilai h yang lebih kecil. Selain itu juga terdapat beberapa proses yang diubah. Seperti pada library dan pada proses penampilan grafik. Hal tersebut dikarenakan supaya gambar grafik untuk Metode Heun dan Metode Euler bisa langsung tersimpan di directory file perangkat yg kita gunakan.
+
+Diantara kedua Metode yang digunakan, keduanya menunjukkan hasil nilai yang sama. Oleh karena itu kedua Metode bisa dijadikan pilihan dalam proses perhitungan persamaan diferensial. Namun kedua metode memiliki kelebihan masing - masing. Metode Heun yang mana merupakan Metode pengembangan dari Metode Euler sudah terdapat persamaan prediksi dan koreksi. Namun pada Metode Euler memiliki kelebihan bahwa, perhitungan yang dilakukan menggunakan cara yang lebih mudah dibandingkan Metode Heun yang menggunakan 2 persamaan. Perbedaan penyelesaian kedua Metode dalam persamaan diferensial biasa yaitu pada Metode Euler menggunakan garis yang bersinggungan dengan fungsi di awal interval sebagai perkiraan kemiringan fungsi selama interval. Akan teteapi, Metode Heun mempertimbangkan garis singgung kurva solusi di kedua ujung interval. Hal ini yang menyebabkan perhitungan iterasi yang lebih banyak pada Metode Heun dibandingkan dengan Metode Euler. Semakin banyak iterasi menandakan bahwa perhitungan itu akan semakin baik hasilnya.
 
 
 # Saran Pengembangan
