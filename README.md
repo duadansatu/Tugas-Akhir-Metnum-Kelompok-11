@@ -637,7 +637,7 @@ Diantara kedua Metode yang digunakan, keduanya menunjukkan hasil nilai yang sama
 
 
 ## 4. Saran Pengembangan
-1. Tipe pembuatan grafik dapat dikreasikan dengan mengacu pada [Style sheets referece](https://matplotlib.org/stable/gallery/style_sheets/style_sheets_reference.html)
+1. Tipe pembuatan grafik dapat dikreasikan dengan mengacu pada [Style sheets reference](https://matplotlib.org/stable/gallery/style_sheets/style_sheets_reference.html)
 2. Tipe garis dan warna pada grafik dapat dikreasikan dengan mengacu pada [Line and Color style](https://matplotlib.org/2.1.1/api/_as_gen/matplotlib.pyplot.plot.html)
 3. Persamaan untuk setiap metode dapat *customizable*
 
