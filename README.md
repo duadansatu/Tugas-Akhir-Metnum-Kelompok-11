@@ -19,15 +19,17 @@ Perlu diperhatikan bahwa file (.exe) ini berkaitan dengan *directory file* dalam
 1. Pengguna dapat mengunduh folder **Kelompok 11** pada repositori ini.
 2. Buka file **codemetnum11.py** pada folder **code**.
 ![2 0](https://user-images.githubusercontent.com/85191303/120666395-c0a40a00-c4b6-11eb-849a-eda965a748bc.png)
-4. Pada bagian **Modul 4: Metode Trapesium 1 Pias **, ubah *directory file* sesuai dengan lokasi *directory file* folder image anda.
+4. Pada bagian **Modul 4: Metode Trapesium 1 Pias**, ubah *directory file* sesuai dengan lokasi *directory file* folder image anda.
 ![2](https://user-images.githubusercontent.com/85191303/120666849-20021a00-c4b7-11eb-8e29-50107166713e.png)
-Hal yang sama juga dilakukan pada **Modul 4: Metode Trapesium Banyak Pias** dan **Modul 5: Metode Euler dan Heun**. Sesuaikan akhiran *directory file* dengan metode yang digunakan. Kemudian *save* file **codemetnum.py**
+Hal yang sama juga dilakukan pada **Modul 4: Metode Trapesium Banyak Pias** dan **Modul 5: Metode Euler dan Heun**. 
+5. Sesuaikan akhiran *directory file* dengan metode yang digunakan. 
 ```
 plt.savefig(r'C:\Users\asus\Documents\KULIAH\Sem 4\METNUM\Kelompok 11\image\**NamaMetode**.png')
 ```
-5. Kemudian, buka file **setup.exe**.
+6. Kemudian *save* file **codemetnum.py**.
+6. Buka file **setup.exe**.
 ![1](https://user-images.githubusercontent.com/85191303/120664873-7f5f2a80-c4b5-11eb-9798-a1b6432cc535.png)
-6. Lalu ikuti perintah yang terdapat pada program. 
+7. Lalu ikuti perintah yang terdapat pada program. 
 
 ## 3. Metode Pengerjaan
 1. Modul 2: Akar-akar Persamaan
