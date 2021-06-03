@@ -523,7 +523,44 @@ def simpson3per8(x0,xn,n):
 ```
 ### 3.4. Modul 5 : Persamaan Diferensial Biasa
 * #### Metode Euler
+Metode Euler merupakan metode paling sederhana yang diturunkan dari deret Taylor. dalah prosedur numerik orde pertama untuk menyelesaikan persamaan diferensial biasa (ODE) dengan nilai awal yang diberikan . Ini adalah metode eksplisit paling dasar untuk integrasi numerik dari persamaan diferensial biasa dan merupakan metode Runge-Kutta 
+yang paling sederhana. Metode Euler merupakan metode yang lebih sederhana, dibandingkan metode Heun. Metode Heun memiliki nilai yang lebih akurat dikarenakan metode heun adalah metode peningkatan dari metode euler.
 
+Penggunaan Metode Euler dalam suatu fungsi untuk suatu proses integrasi. Berikut ini adalah alogritma yang digunakan:
+```
+ def euler():
+        Nama = (input("Masukkan Nama: "))
+        Nim = (input("Masukkan NIM: "))
+        Kelas = (input("Masukkan Kelas: "))
+        plt.style.use('seaborn-poster')
+        ipy = get_ipython()
+        if ipy is not None:
+            ipy.run_line_magic('matplotlib', 'inline')
+        h = float(input("Masukkan nilai h: ")) #Banyak langkah yang akan digunakan 
+        x0 = float(input("Masukkan nilai x awal: ")) #Masukkan kondisi awal 0
+        xn = float(input("Masukkan nilai x akhir: "))  
+        x = np.arange(x0, xn + h, h) #Grid
+        y0 = float(input("Masukkan nilai y awal: ")) #Masukkan kondisi awal 0
+        G = (2*(x**3)+9*(x**2)+2*(x)+20) #Fungsi
+        f = lambda x, y: 2*(x**3)+9*(x**2)+2*(x)+20 #Persamaan Diferensial Biasa
+        y = np.zeros(len(x))
+        y[0] = y0
+        for i in range(0, len(x) - 1):
+            y[i + 1] = y[i] + h*f(x[i], y[i])
+        print(y)
+        error = G-y
+        print(error)
+        judul = ("\n Grafik Pendekatan Persamaan Differensial Biasa Dengan Metode Euler \n\n %s_%s_%s \n" % (Nama,Nim,Kelas))
+        plt.figure(figsize = (12, 10))
+        plt.plot(x, y, 'b--', color='r', label='Hasil Pendekatan')
+        plt.plot(x, G, '-g', color='y', label='Hasil Analitik')
+        plt.title(judul) #Judul Plot
+        plt.xlabel('x') #sumbu x
+        plt.ylabel('F(x)') #sumbu y
+        plt.grid() #untuk menampilkan grid
+        plt.legend(loc='lower right')
+        plt.savefig('image\euler.png')
+  ```
 * #### Metode Heun
 Metode Heun merupakan salah satu peningkatan dari Metode Euler. Modifikasi dilakukan dengan memperkirakan kemiringan. Metode Heun merupakan perbaikan dari Metode Euler untuk meningkatkan efisiensi sehingga dapat menyelesaikan persamaan diferensial biasa dengan kondisi awal dengan mengasumsikan kemiringan tangen sebagai rata-rata dari rata-rata aritmatika dan rata-rata kontra-harmonik. Metode Heun mempunyai ketelitian yang rendah karena memiliki nilai error yang besar (sebanding dengan h). Nilai error dapat dikurangi dengan menggunakan Metode Heun yang merupakan perbaikan dari Metode Euler. Metode ini melibatkan 2 buah persamaan. Persamaan pertama disebut sebagai persamaan prediktor yang digunakan untuk memprediksi nilai integrasi awal. Persamaan kedua disebut sebagai persamaan korektor yang mengoreksi hasil integrasi awal. Pada Metode Heun, solusi Metode Euler dijadikan solusi perkiraan awal (predictor). Selanjutnya, solusi perkiraan awal ini diperbaiki dengan Metode Heun (corrector).
 
