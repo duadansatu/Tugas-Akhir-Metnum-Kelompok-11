@@ -625,6 +625,8 @@ Diantara kedua Metode yang digunakan, keduanya menunjukkan hasil nilai yang sama
 1. Lebih dikreasiin lagi untuk tipe-tipe pembuatan grafik
 2. Kedepannya untuk script supaya customizable
 
+
+
 Demikianlah tugas akhir praktikum metode numerik ini diperbuat mohon maaf apabila terdapat kesalahan. Kelompok 11 selaku author dari repositori kali ini juga mengucapkan terimakasih kepada:
 1. Dr. Aris Ismanto, S.Si, M.Si. selaku dosen pembimbing mata kuliah Metode Numerik
 2. Rikha Widiaratih, S.Si, M.Si. selaku dosen pembimbing mata kuliah Metode Numerik
