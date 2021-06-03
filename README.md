@@ -1,7 +1,7 @@
 # Tugas-Akhir-Metnum-Kelompok-11
 Repositori ini dibuat untuk memenuhi Tugas Akhir Praktikum Metode Numerik Oseanografi 2021. Repositori ini memuat executable (.exe) file yang dapat memproses beberapa persamaan metode numerik untuk penyelesaian perhitungan numerik. Pengerjaan untuk repositori kali ini menggunakan bahasa pemrograman python yang dapat dilakukan pada beberapa platform seperti Google Colaboratory dan Jupyter Notebook. Sedangkan untuk library yang digunakan kali ini adalah Numpy, Matplotlib, IPython, Scipy, Pprint, dan Math. Seluruh script yang dibuat adalah hasil kelompok 11 Oseanografi 2019. Semoga dapat bermanfaat!
 
-# AUTHOR (KELOMPOK 11)
+# 1. AUTHOR (KELOMPOK 11)
 1. Rachel Maelisa Damanik 26050119120017 A
 2. Siti Wulandari 26050119120016 B
 3. Jane E.V. Siahaan 26050119120015 B
@@ -14,17 +14,20 @@ Repositori ini dibuat untuk memenuhi Tugas Akhir Praktikum Metode Numerik Oseano
 10. Dara Sartika 26050119120007 B
 11. Adella Eka Wardani 26050119120005 B
 
-# Cara Penggunaan
+# 2. Cara Penggunaan
 
-# Metode Pengerjaan
+# 3. Metode Pengerjaan
 1. Modul 2: Akar-akar Persamaan
 2. Modul 3: Sistem Persamaan Linear dan Matrix
 3. Modul 4: Integrasi Numerik
 4. Modul 5: Persamaan Differensial Biasa
 
-## Modul 3 : Sistem Persamaan Linear dan Matriks
+## 3.1. Modul 2 : Akar-akar Persamaan
+
+## 3.2. Modul 3 : Sistem Persamaan Linear dan Matriks
 * ##### Metode Gauss
 Metode eliminasi Gauss adalah suatu cara mengoperasikan nilai-nilai di dalam matriks menjadi matriks yang lebih sederhana dan banyak digunakan dalam penyelesaian sistem persamaan linier. Prosedur penyelesaian dari metode ini adalah dengan melakukan operasi baris menjadi matriks eselon-baris. Metode ini mengubah persamaan linear tersebut ke dalam matriks augmentasi dan mengoperasikannya. Metode eliminasi gauss termasuk dalam metode penyelesaian persamaan linear dengan cara langsung. Inti dari metode ini adalah membawa persamaan kedalam bentuk matriks dan menyederhanakan matriks menjadi bentuk segitiga atas. Setelah mendapat bentuk matriks tersebut dilakukan subtitusi balik untuk mendapat nilai dari akar persamaan tadi. 
+
 Contoh persamaan untuk metode Gauss:
 * 11x1 + 5x2 + 2x3 + 7x4 = -2.328
 * 2x1 + 11x2 + 5x3 + 3x4 = 1.672
@@ -35,6 +38,7 @@ Contoh persamaan untuk metode Gauss:
 Metode eliminasi Gauss-Jordan adalah pengembangan dari eliminasi Gauss yang hasilnya lebih sederhana lagi. Caranya adalah dengan meneruskan operasi baris dari eliminasi Gauss sehingga menghasilkan matriks yang Eselon-baris. Ini juga dapat digunakan sebagai salah satu metode penyelesaian persamaan linear dengan menggunakan matriks. Metode ini digunakan untuk mencari invers dari sebuah matriks. Prosedur umum untuk metode eliminasi Gauss-Jordan ini adalah:
 1. Ubah sistem persamaan linier yang ingin dihitung menjadi matriks augmentasi.
 2. Lakukan operasi baris elementer pada matriks augmentasi (A|b) untuk mengubah matriks A menjadi dalam bentuk baris eselon yang tereduksi
+
 Contoh persamaan untuk metode Gauss - Jordan: 
 * 2x1 + 5x2 + 3x3 + 4x4 = 4.067
 * 2x1 + 7x2 + 5x3 + 3x4 = 3.067
@@ -43,6 +47,7 @@ Contoh persamaan untuk metode Gauss - Jordan:
 
 * ##### Metode Gauss - Seidel
 Metode iterasi Gauss-Seidel adalah metode yang menggunakan proses iterasi hingga diperoleh nilai-nilai yang berubah-ubah dan akhirnya relatif konstan. Metode iterasi Gauss Seidel dikembangkan dari gagasan metode iterasi pada solusi persamaan tak linier. Metode eliminasi gauss-seidel digunakan untuk menyelesaikan SPL yang berukuran kecil karena metode ini lebih efisien. Dengan metode iterasi Gauss-Seidel toleransi pembulatan dapat diperkecil karena iterasi dapat diteruskan sampai seteliti mungkin sesuai dengan batas toleransi yang diinginkan. Kelemahan dari metode ini adalah masalah pivot (titik tengah) yang harus benar–benar diperhatikan, karena penyusunan yang salah akan menyebabkan iterasi menjadi divergen dan tidak diperoleh hasil yang benar.
+
 Contoh persamaan untuk metode Gauss - Seidel:
 * 4x1 + 6x2 + 2x3 + 8x4 = 8.063
 * 2x1 + 4x2 + 3x3 + 6x4 = 9.063
@@ -57,7 +62,7 @@ Contoh persamaan untuk metode Jacobi:
 * 1x1 + 5x2 + 4x3 + 2x4 = 2.135
 * 3x1 + 9x2 + 2x3 + 5x4 = 1.802
 
-## Modul 4 : Integrasi Numerik
+## 3.3. Modul 4 : Integrasi Numerik
 * ### Metode Trapesium Satu Pias
 
 ```
@@ -136,7 +141,7 @@ def simpson1per3(x0,xn,n):
         integral = integral * h / 3
         return integral
 ```
-## Modul 5 : Persamaan Diferensial Biasa
+## 3.4. Modul 5 : Persamaan Diferensial Biasa
 * ### Metode Euler
 
 * ### Metode Heun
@@ -193,6 +198,6 @@ Berdasarkan hasil visualisasi dapat dilihat bahwa Metode Heun dapat dengan baik 
 Diantara kedua Metode yang digunakan, keduanya menunjukkan hasil nilai yang sama. Oleh karena itu kedua Metode bisa dijadikan pilihan dalam proses perhitungan persamaan diferensial. Namun kedua metode memiliki kelebihan masing - masing. Metode Heun yang mana merupakan Metode pengembangan dari Metode Euler sudah terdapat persamaan prediksi dan koreksi. Namun pada Metode Euler memiliki kelebihan bahwa, perhitungan yang dilakukan menggunakan cara yang lebih mudah dibandingkan Metode Heun yang menggunakan 2 persamaan. Perbedaan penyelesaian kedua Metode dalam persamaan diferensial biasa yaitu pada Metode Euler menggunakan garis yang bersinggungan dengan fungsi di awal interval sebagai perkiraan kemiringan fungsi selama interval. Akan teteapi, Metode Heun mempertimbangkan garis singgung kurva solusi di kedua ujung interval. Hal ini yang menyebabkan perhitungan iterasi yang lebih banyak pada Metode Heun dibandingkan dengan Metode Euler. Semakin banyak iterasi menandakan bahwa perhitungan itu akan semakin baik hasilnya.
 
 
-# Saran Pengembangan
+# 4. Saran Pengembangan
 1. Lebih dikreasiin lagi untuk tipe-tipe pembuatan grafik
 2. Kedepannya untuk script supaya customizable
