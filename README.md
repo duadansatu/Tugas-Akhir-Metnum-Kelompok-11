@@ -14,10 +14,13 @@ Repositori ini dibuat untuk memenuhi Tugas Akhir Praktikum Metode Numerik Oseano
 10. Dara Sartika 26050119120007 B
 11. Adella Eka Wardani 26050119120005 B
 
+# Cara Penggunaan
+
 # Metode Pengerjaan
 1. Modul 2: Akar-akar Persamaan
 2. Modul 3: Sistem Persamaan Linear dan Matrix
 3. Modul 4: Integrasi Numerik
 4. Modul 5: Persamaan Differensial Biasa
 
-
+# Saran Pengembangan
+1. Lebih dikreasiin lagi untuk tipe-tipe pembuatan grafik
