@@ -138,6 +138,42 @@ def newton_rapson(X1): #pendefinisian metode Newton Rapson
     print("Toleransi Error: ", akar)
 ```
 
+* #### Metode Secant
+Metode Secant ini pada dasarnya sama dengan metode Newton Raphson, namun berbeda pada pendekatan untuk turunan dari f saja. Metode secant bertujuan untuk menyelesaikan masalah yang terdapat pada metode Newton-Raphson yang terkadang sulit digunakan untuk mendapatkan turunan pertama. Metode Secant merupakan perbaikan dari metode regula-falsi dan Newton-Raphson dimana kemiringan dua titik dinyatakan secara diskrit, dengan mengambil bentuk garis lurus yang melalui satu titik. Metode secant memerlukan 2 tebakan awal yang tidak harus mengurung/mengapit akar. Iterasi berlangsung sampai batas maksimum atau sampai batas toleransi terpenuhi.
+
+```
+def Metode_Secant(X1): #Pendefinisian
+    X1 = X1
+    X2 = X1 - 1
+    error = 1
+    iterasi = 0
+    while(error > 0.0001): #Looping
+        iterasi +=1:
+        FX1 = -9772.8*(X1**3)+7055.2*(X1**2)-1102.2*(X1)+10.639
+        FXmin = -9772.8*(X2**3)+ 7055.2*(X2**2)- 1102.2*(X2)+10.639
+        X3 = X1 - ((FX1)*(X1-(X2)))/((FX1)-(FXmin))
+        FXplus = -9772.8*(X3**3)+ 7055.2*(X3**2)- 1102.2*(X3)+10.639
+        if FXplus < 0:
+            error = FXplus * (-1)
+        else:
+            error = FXplus
+        if error > 0.0001:
+            X2 = X1
+            X1 = X3
+        else:
+            print("Selesai")
+        if iterasi > 100:
+            print("Angka tak hingga")
+        break
+        print(iterasi, "|", FX1, "|", FXmin, "|", X3, "|", FXplus, "|", error)
+    print("Jumlah Iterasi: ", iterasi)
+    print("Akar persamaan adalah: ", X3)
+    print("Toleransi Error: ", error)
+```
+
+* #### Metode Iterasi
+Metode Iterasi merupakan metode yang berbasiskan langkah-langkah/algoritma sederhana yang diulang-ulang pada sistem persamaan tersebut hingga sistem persamaan mencapai keadaan konvergen yang merepresentasikan solusi dari sistem persamaan tersebut. Kelebihan dari metode ini ialah memori komputer yang digunakan sedikit. Namun, kelemahannya banyaknya langkah-langkah perhitungan yang dilakukan tidak dapat diprediksi sistem persamaan tidak berada pada kondisi yang kondusif, maka konvergensi dari suatu sistem persamaan tidak dapat terjamin.
+
 ### 3.2. Modul 3 : Sistem Persamaan Linear dan Matriks
 * #### Metode Gauss
 Metode eliminasi Gauss adalah suatu cara mengoperasikan nilai-nilai di dalam matriks menjadi matriks yang lebih sederhana dan banyak digunakan dalam penyelesaian sistem persamaan linier. Prosedur penyelesaian dari metode ini adalah dengan melakukan operasi baris menjadi matriks eselon-baris. Metode ini mengubah persamaan linear tersebut ke dalam matriks augmentasi dan mengoperasikannya. Metode eliminasi gauss termasuk dalam metode penyelesaian persamaan linear dengan cara langsung. Inti dari metode ini adalah membawa persamaan kedalam bentuk matriks dan menyederhanakan matriks menjadi bentuk segitiga atas. Setelah mendapat bentuk matriks tersebut dilakukan subtitusi balik untuk mendapat nilai dari akar persamaan tadi. 
