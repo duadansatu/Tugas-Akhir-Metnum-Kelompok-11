@@ -34,6 +34,37 @@ Contoh persamaan untuk metode Gauss:
 * 4x1 + 6x2 + 11x3 + 2x4 = 9.005
 * 2x1 + 8x2 + 4x3 + 11x4 = 7.338
 
+Pendefinisian metode Gauss
+```
+def Gauss(A, f):
+        A = np.array((A), dtype=float)
+        f = np.array((f), dtype=float)
+        n = len(f)
+```
+Looping dan kondisi pada matrix
+```
+for i in range(0, n - 1):  
+    if np.abs(A[i, i]) == 0:
+         for k in range(i + 1, n):
+            if np.abs(A[k, i]) > np.abs(A[i, i]):
+```
+Tukar antara baris i dan k
+```
+ A[[i, k]] = A[[k, i]]
+ f[[i, k]] = f[[k, i]]
+ ```
+Pengulangan baris yang ada di bawah diagonal untuk setiap kolom
+```
+for j in range(i + 1, n):
+    m = A[j, i] / A[i, i]
+    A[j, :] = A[j, :] - m * A[i, :]
+    f[j] = f[j] - m * f[i]
+```
+Perintah untuk print metode Gauss
+```
+return A, f
+```
+
 * ###### Metode Gauss - Jordan
 Metode eliminasi Gauss-Jordan adalah pengembangan dari eliminasi Gauss yang hasilnya lebih sederhana lagi. Caranya adalah dengan meneruskan operasi baris dari eliminasi Gauss sehingga menghasilkan matriks yang Eselon-baris. Ini juga dapat digunakan sebagai salah satu metode penyelesaian persamaan linear dengan menggunakan matriks. Metode ini digunakan untuk mencari invers dari sebuah matriks. Prosedur umum untuk metode eliminasi Gauss-Jordan ini adalah:
 1. Ubah sistem persamaan linier yang ingin dihitung menjadi matriks augmentasi.
