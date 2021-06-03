@@ -24,3 +24,4 @@ Repositori ini dibuat untuk memenuhi Tugas Akhir Praktikum Metode Numerik Oseano
 
 # Saran Pengembangan
 1. Lebih dikreasiin lagi untuk tipe-tipe pembuatan grafik
+2. Kedepannya untuk script supaya bisa customizable.
