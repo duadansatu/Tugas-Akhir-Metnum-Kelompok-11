@@ -14,7 +14,20 @@ Repositori ini dibuat untuk memenuhi Tugas Akhir Praktikum Metode Numerik Oseano
 10. Dara Sartika 26050119120007 B
 11. Adella Eka Wardani 26050119120005 B
 
-## 2. Cara Penggunaan
+## 2. Cara Penggunaan *Executable File* (.exe):computer:
+Perlu diperhatikan bahwa file (.exe) ini berkaitan dengan *directory file* dalam penggunaannya, maka terdapat beberapa bagian script yang harus disesuaikan. Berikut adalah langkah dalam menggunakan file (.exe):
+1. Pengguna dapat mengunduh folder **Kelompok 11** pada repositori ini.
+2. Buka file **codemetnum11.py** pada folder **code**.
+![2 0](https://user-images.githubusercontent.com/85191303/120666395-c0a40a00-c4b6-11eb-849a-eda965a748bc.png)
+4. Pada bagian **Modul 4: Metode Trapesium 1 Pias **, ubah *directory file* sesuai dengan lokasi *directory file* folder image anda.
+![2](https://user-images.githubusercontent.com/85191303/120666849-20021a00-c4b7-11eb-8e29-50107166713e.png)
+Hal yang sama juga dilakukan pada **Modul 4: Metode Trapesium Banyak Pias** dan **Modul 5: Metode Euler dan Heun**. Sesuaikan akhiran *directory file* dengan metode yang digunakan. Kemudian *save* file **codemetnum.py**
+```
+plt.savefig(r'C:\Users\asus\Documents\KULIAH\Sem 4\METNUM\Kelompok 11\image\**NamaMetode**.png')
+```
+5. Kemudian, buka file **setup.exe**.
+![1](https://user-images.githubusercontent.com/85191303/120664873-7f5f2a80-c4b5-11eb-9798-a1b6432cc535.png)
+6. Lalu ikuti perintah yang terdapat pada program. 
 
 ## 3. Metode Pengerjaan
 1. Modul 2: Akar-akar Persamaan
@@ -623,7 +636,7 @@ Diantara kedua Metode yang digunakan, keduanya menunjukkan hasil nilai yang sama
 
 ## 4. Saran Pengembangan
 1. Tipe pembuatan grafik dapat dikreasikan dengan mengacu pada [Style sheets referece](https://matplotlib.org/stable/gallery/style_sheets/style_sheets_reference.html)
-2. Tipe garis dan warna pada grafik dapat dikresikan dengan mengacu pada [Line and Color style](https://matplotlib.org/2.1.1/api/_as_gen/matplotlib.pyplot.plot.html)
+2. Tipe garis dan warna pada grafik dapat dikreasikan dengan mengacu pada [Line and Color style](https://matplotlib.org/2.1.1/api/_as_gen/matplotlib.pyplot.plot.html)
 3. Persamaan untuk setiap metode dapat *customizable*
 
 ## 5. Ucapan Terima Kasih:pray:
@@ -634,3 +647,6 @@ Demikianlah tugas akhir praktikum metode numerik ini kami buat. Seluruh authors 
 4. Dr. Ir. Dwi Haryo Ismunarti, M.Si. selaku dosen pengampu mata kuliah Metode Numerik
 5. Tim asisten Praktikum Metode Numerik 2021 yang selalu mendampingi dalam pengerjaan tugas akhir ini
 6. Seluruh rekan-rekan Oseanografi 2019 yang turut mendukung tersusunnya repositori ini
+
+#### :mailbox:Jika terdapat pertanyaan mengenai repositori ini, dapat menghubungi *contact person* berikut: [Kelompok 11](http://bit.ly/Metnum11Queries)
+
