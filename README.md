@@ -26,7 +26,7 @@ Hal yang sama juga dilakukan pada **Modul 4: Metode Trapesium Banyak Pias** dan 
 ```
 plt.savefig(r'C:\Users\asus\Documents\KULIAH\Sem 4\METNUM\Kelompok 11\image\**NamaMetode**.png')
 ```
-6. Kemudian *save* file **codemetnum.py**.
+6. Kemudian *save* file **codemetnum11.py**.
 6. Buka file **setup.exe**.
 ![1](https://user-images.githubusercontent.com/85191303/120664873-7f5f2a80-c4b5-11eb-9798-a1b6432cc535.png)
 7. Lalu ikuti perintah yang terdapat pada program. 
