@@ -37,9 +37,9 @@ Contoh persamaan untuk metode Gauss:
 Pendefinisian metode Gauss
 ```
 def Gauss(A, f):
-        A = np.array((A), dtype=float)
-        f = np.array((f), dtype=float)
-        n = len(f)
+    A = np.array((A), dtype=float)
+    f = np.array((f), dtype=float)
+    n = len(f)
 ```
 Looping dan kondisi pada matrix
 ```
@@ -60,7 +60,7 @@ for j in range(i + 1, n):
     A[j, :] = A[j, :] - m * A[i, :]
     f[j] = f[j] - m * f[i]
 ```
-Perintah untuk print metode Gauss
+Perintah untuk print hasil metode Gauss
 ```
 return A, f
 ```
@@ -76,6 +76,37 @@ Contoh persamaan untuk metode Gauss - Jordan:
 * 4x1 + 8x2 + 2x3 + 8x4 = 4.067
 * 5x1 + 9x2 + 6x3 + 4x4 = 6.067
 
+Pendefinisian Gauss-Jordan
+```
+def GaussJordan(a,n):
+```
+Looping untuk pengolahan metode Gauss Jordan
+```
+print('=============Mulai Iterasi===============')
+for i in range(n):
+    if a[i][i]==0:
+        sys.exit('Dibagi dengan angka nol (proses tidak dapat dilanjutkan)')
+    for j in range(n):
+        if i !=j:
+            ratio=a[j][i]/a[i][i]
+            for k in range(n+1):
+                a[j,k]=a[j][k]-ratio*a[i][k]
+            print(a)
+            print(f'============================================')
+```
+Membuat semua variabel
+```
+ax=np.zeros((n,n+1))
+for i in range(n):
+    for j in range(n+1):
+        ax[i,j]=a[i][j]/a[i][i]
+print('===================Akhir Iterasi===================')
+```
+Perintah untuk print hasil metode Gauss-Jordan
+```
+return ax
+```
+
 * ###### Metode Gauss - Seidel
 Metode iterasi Gauss-Seidel adalah metode yang menggunakan proses iterasi hingga diperoleh nilai-nilai yang berubah-ubah dan akhirnya relatif konstan. Metode iterasi Gauss Seidel dikembangkan dari gagasan metode iterasi pada solusi persamaan tak linier. Metode eliminasi gauss-seidel digunakan untuk menyelesaikan SPL yang berukuran kecil karena metode ini lebih efisien. Dengan metode iterasi Gauss-Seidel toleransi pembulatan dapat diperkecil karena iterasi dapat diteruskan sampai seteliti mungkin sesuai dengan batas toleransi yang diinginkan. Kelemahan dari metode ini adalah masalah pivot (titik tengah) yang harus benar–benar diperhatikan, karena penyusunan yang salah akan menyebabkan iterasi menjadi divergen dan tidak diperoleh hasil yang benar.
 
@@ -84,6 +115,8 @@ Contoh persamaan untuk metode Gauss - Seidel:
 * 2x1 + 4x2 + 3x3 + 6x4 = 9.063
 * 5x1 + 9x2 + 6x3 + 4x4 = 6.063
 * 2x1 + 5x2 + 4x3 + 3x4 = 4.063
+
+
 
 * ###### Metode Jacobi
 Metode iterasi Jacobi ini digunakan untuk menyelesaikan persamaan linier yang proporsi koefisien nol nya besar. Metode ini ditemukan oleh matematikawan yang berasal dari Jerman, Carl Gustav Jakob Jacobi. Penemuan ini diperkirakan pada tahun 1800-an. Iterasi dapat diartikan sebagai suatu proses atau metode yang digunakan secara berulang-ulang (pengulangan) dalam menyelesaikan suatu permasalahan matematika. 
