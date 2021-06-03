@@ -1,5 +1,5 @@
-# Tugas Akhir Praktikum Metode Numerik Kelompok 11
-Repositori ini dibuat untuk memenuhi Tugas Akhir Praktikum Metode Numerik Oseanografi 2021. Repositori ini memuat executable (.exe) file yang dapat memproses beberapa persamaan metode numerik untuk penyelesaian perhitungan numerik. Pengerjaan untuk repositori kali ini menggunakan bahasa pemrograman python yang dapat dilakukan pada beberapa platform seperti Google Colaboratory dan Jupyter Notebook. Sedangkan untuk library yang digunakan kali ini adalah Numpy, Matplotlib, IPython, Scipy, Pprint, dan Math. Seluruh script yang dibuat adalah hasil kelompok 11 Oseanografi 2019. Semoga dapat bermanfaat!
+# 🌊Tugas Akhir Praktikum Metode Numerik Kelompok 11🌊
+Repositori ini dibuat untuk memenuhi Tugas Akhir Praktikum Metode Numerik Oseanografi 2021. Repositori ini memuat *executable* (.exe) file yang dapat memproses beberapa persamaan metode numerik untuk penyelesaian perhitungan numerik. Pengerjaan untuk repositori kali ini menggunakan bahasa pemrograman python yang dapat dilakukan pada beberapa platform seperti *Google Colaboratory* dan *Jupyter Notebook*. Sedangkan untuk library yang digunakan kali ini adalah *Numpy, Matplotlib, IPython, Scipy, dan Pprint*. Seluruh script yang dibuat adalah hasil kelompok 11 Oseanografi 2019. Semoga dapat bermanfaat!
 
 ## 1. AUTHOR (KELOMPOK 11)
 1. Rachel Maelisa Damanik 26050119120017 A
@@ -622,14 +622,15 @@ Diantara kedua Metode yang digunakan, keduanya menunjukkan hasil nilai yang sama
 
 
 ## 4. Saran Pengembangan
-1. Lebih dikreasiin lagi untuk tipe-tipe pembuatan grafik
-2. Kedepannya untuk script supaya customizable
+1. Tipe pembuatan grafik dapat dikreasikan dengan mengacu pada [Style sheets referece](https://matplotlib.org/stable/gallery/style_sheets/style_sheets_reference.html)
+2. Tipe garis dan warna pada grafik dapat dikresikan dengan mengacu pada [Line and Color style](https://matplotlib.org/2.1.1/api/_as_gen/matplotlib.pyplot.plot.html)
+3. Persamaan untuk setiap metode dapat *customizable*
 
 
-
-Demikianlah tugas akhir praktikum metode numerik ini diperbuat mohon maaf apabila terdapat kesalahan. Kelompok 11 selaku author dari repositori kali ini juga mengucapkan terimakasih kepada:
-1. Dr. Aris Ismanto, S.Si, M.Si. selaku dosen pembimbing mata kuliah Metode Numerik
-2. Rikha Widiaratih, S.Si, M.Si. selaku dosen pembimbing mata kuliah Metode Numerik
-3. Aziz Rifai, S.T, M.Si. selaku dosen pembimbing mata kuliah Metode Numerik
-4. Dr. Ir. Dwi Haryo Ismunarti, M.Si. selaku dosen pembimbing mata kuliah Metode Numerik
-5. Tim asisten praktikum metode numerik yang selalu mendampingi dalam pengerjaan tugas akhir ini
+Demikianlah tugas akhir praktikum metode numerik ini kami buat. Seluruh authors memohon maaf apabila terdapat kesalahan dalam tugas akhir ini. Kelompok 11 selaku author dari repositori kali ini juga mengucapkan terimakasih kepada:
+1. Dr. Aris Ismanto, S.Si, M.Si. selaku dosen pengampu mata kuliah Metode Numerik
+2. Rikha Widiaratih, S.Si, M.Si. selaku dosen pengampu mata kuliah Metode Numerik
+3. Aziz Rifai, S.T, M.Si. selaku dosen pengampu mata kuliah Metode Numerik
+4. Dr. Ir. Dwi Haryo Ismunarti, M.Si. selaku dosen pengampu mata kuliah Metode Numerik
+5. Tim asisten Praktikum Metode Numerik yang selalu mendampingi dalam pengerjaan tugas akhir ini
+6. Seluruh rekan-rekan OSeanografi 2019 yang juga mendukung dalam bentuk dukungan
