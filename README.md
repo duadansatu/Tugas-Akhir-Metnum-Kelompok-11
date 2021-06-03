@@ -22,7 +22,7 @@ Repositori ini dibuat untuk memenuhi Tugas Akhir Praktikum Metode Numerik Oseano
 3. Modul 4: Integrasi Numerik
 4. Modul 5: Persamaan Differensial Biasa
 
-### 3.1. Modul 2 : Akar-akar Persamaan
+### 🏷️3.1. Modul 2 : Akar-akar Persamaan
 * #### Metode Setengah Interval
 Metode Setengah Interval merupakan suatu metode bagi dua dimana akar penyelesaian metode ini adalah jumlah interval batas bawah dengan interval batas atas bagi 2. Metode ini merupakan bentuk paling sederhana diantara beberapa metode lainnya. Kelebihan dari metode ini adalah selalu berhasil dalam menentukan akar-akar (solusi) yang dicari atau dengan kata lain selalu konvergen. Untuk melakukan perhitungan dengan metode ini maka hitung fungsu pada interval yang sama dai x sampai pada tanda fungsi f(Xi) dan (fXi+1), yaitu apabila f(Xi)× (fXi+1)<0. Perkirakan pertama dari akar Xt dan dihitung rerata nilai Xi dan Xi+1 , ytiu Xt = (Xi + Xi+1)/2. Lalu buat evaluasi dimana apabila f(Xi)× (fXi+1)<0, akar persamaan berada pada sub interval pertama dimana Xt=Xi+1 , apabila f(Xi)× (fXi+1)>0, maka akar persamaan pada sub bab interval kedua dimana Xt=Xi, dan apabila f(Xi)× (fXi+1)=0 maka akar persamaan adalah Xt dan perhitungan selesai. Apabila ternyata nilai yang diperoleh f(Xi)× (fXi+1)<0 dan f(Xi)× (fXi+1)>0, maka hitung perkiraan baru Xt = (Xi + Xi+1)/2. Jika perkiraan baru ternyata sudah kecil atau sesuai batasan yang ditentukan,maka hitungan selesai dan Xt adalah akar persamaan yang dicari. Proses iterasi berhenti jika toleransi kesalahan yang diberikan dalam soal sudah terpenuhi dan setelah menjalankan jumlah tertentu dari iterasi dan jumlahnya sudah ditentukan dalam soal yang diberikan.
 
@@ -202,7 +202,7 @@ def iterasi(X1): #pendefinisian
     print("Toleransi Error: ", error)
 ```
 
-### 3.2. Modul 3 : Sistem Persamaan Linear dan Matriks
+### 🏷️3.2. Modul 3 : Sistem Persamaan Linear dan Matriks
 * #### Metode Gauss
 Metode eliminasi Gauss adalah suatu cara mengoperasikan nilai-nilai di dalam matriks menjadi matriks yang lebih sederhana dan banyak digunakan dalam penyelesaian sistem persamaan linier. Prosedur penyelesaian dari metode ini adalah dengan melakukan operasi baris menjadi matriks eselon-baris. Metode ini mengubah persamaan linear tersebut ke dalam matriks augmentasi dan mengoperasikannya. Metode eliminasi gauss termasuk dalam metode penyelesaian persamaan linear dengan cara langsung. Inti dari metode ini adalah membawa persamaan kedalam bentuk matriks dan menyederhanakan matriks menjadi bentuk segitiga atas. Setelah mendapat bentuk matriks tersebut dilakukan subtitusi balik untuk mendapat nilai dari akar persamaan tadi. 
 
@@ -342,7 +342,7 @@ Perintah untuk print hasil metode Gauss-Seidel
 return x
 ```
 
-### 3.3. Modul 4 : Integrasi Numerik
+### :label: 3.3. Modul 4 : Integrasi Numerik
 Metode Integrasi Numerik merupakan integrasi tertentu yang didasarkan pada hitungan perkiraan dengan mendekatinya melalui fungsi polinomial dengan data yang tersedia.
 
 
@@ -626,11 +626,11 @@ Diantara kedua Metode yang digunakan, keduanya menunjukkan hasil nilai yang sama
 2. Tipe garis dan warna pada grafik dapat dikresikan dengan mengacu pada [Line and Color style](https://matplotlib.org/2.1.1/api/_as_gen/matplotlib.pyplot.plot.html)
 3. Persamaan untuk setiap metode dapat *customizable*
 
-
+## Ucapan Terima Kasih
 Demikianlah tugas akhir praktikum metode numerik ini kami buat. Seluruh authors memohon maaf apabila terdapat kesalahan dalam tugas akhir ini. Kelompok 11 selaku author dari repositori kali ini juga mengucapkan terimakasih kepada:
 1. Dr. Aris Ismanto, S.Si, M.Si. selaku dosen pengampu mata kuliah Metode Numerik
 2. Rikha Widiaratih, S.Si, M.Si. selaku dosen pengampu mata kuliah Metode Numerik
 3. Aziz Rifai, S.T, M.Si. selaku dosen pengampu mata kuliah Metode Numerik
 4. Dr. Ir. Dwi Haryo Ismunarti, M.Si. selaku dosen pengampu mata kuliah Metode Numerik
 5. Tim asisten Praktikum Metode Numerik yang selalu mendampingi dalam pengerjaan tugas akhir ini
-6. Seluruh rekan-rekan OSeanografi 2019 yang juga mendukung dalam bentuk dukungan
+6. Seluruh rekan-rekan OSeanografi 2019 yang turut mendukung tersusunnya repositori ini
