@@ -174,6 +174,34 @@ def Metode_Secant(X1): #Pendefinisian
 * #### Metode Iterasi
 Metode Iterasi merupakan metode yang berbasiskan langkah-langkah/algoritma sederhana yang diulang-ulang pada sistem persamaan tersebut hingga sistem persamaan mencapai keadaan konvergen yang merepresentasikan solusi dari sistem persamaan tersebut. Kelebihan dari metode ini ialah memori komputer yang digunakan sedikit. Namun, kelemahannya banyaknya langkah-langkah perhitungan yang dilakukan tidak dapat diprediksi sistem persamaan tidak berada pada kondisi yang kondusif, maka konvergensi dari suatu sistem persamaan tidak dapat terjamin.
 
+```
+def iterasi(X1): #pendefinisian
+    X1 = X1
+    error = 1
+    iterasi = 0
+    while (error > 0.0001): #kondisi dan looping
+        iterasi +=1
+        Fxn = -0.0371*(X1**3)+(1.5072*(X1**2))-9.9433*(X1)-14.997
+        X2 = (((1.5072*(X1**2))-(-9.9433*(X1))-14.997)/-0.0371)**(1/3)
+        Ea = (((X2-X1)/(X2))*100)
+        if Ea < error:
+            X1 = X2
+            if Ea > 0:
+                error = Ea
+            else:
+                error = Ea*(-1)
+        else:
+            error = Ea
+            
+        if iterasi > 100: #memeriksa konvergensi
+            print("Angka tak hingga")
+            break
+        print(iterasi, "|", X1, "|", X2, "|", Ea, "|", error) 
+    print("Jumlah Iterasi: ", iterasi) #peintah untuk print
+    print("Akar persamaan adalah: ", X2)
+    print("Toleransi Error: ", error)
+```
+
 ### 3.2. Modul 3 : Sistem Persamaan Linear dan Matriks
 * #### Metode Gauss
 Metode eliminasi Gauss adalah suatu cara mengoperasikan nilai-nilai di dalam matriks menjadi matriks yang lebih sederhana dan banyak digunakan dalam penyelesaian sistem persamaan linier. Prosedur penyelesaian dari metode ini adalah dengan melakukan operasi baris menjadi matriks eselon-baris. Metode ini mengubah persamaan linear tersebut ke dalam matriks augmentasi dan mengoperasikannya. Metode eliminasi gauss termasuk dalam metode penyelesaian persamaan linear dengan cara langsung. Inti dari metode ini adalah membawa persamaan kedalam bentuk matriks dan menyederhanakan matriks menjadi bentuk segitiga atas. Setelah mendapat bentuk matriks tersebut dilakukan subtitusi balik untuk mendapat nilai dari akar persamaan tadi. 
