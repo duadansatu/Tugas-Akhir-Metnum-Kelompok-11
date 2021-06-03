@@ -536,7 +536,8 @@ Penggunaan Metode Euler dalam suatu fungsi untuk suatu proses integrasi. Berikut
         ipy = get_ipython()
         if ipy is not None:
             ipy.run_line_magic('matplotlib', 'inline')
-            
+   
+  #Mendapatkan nilai Persamaan Diferensial Biasa 
         h = float(input("Masukkan nilai h: ")) #Banyak langkah yang akan digunakan 
         x0 = float(input("Masukkan nilai x awal: ")) #Masukkan kondisi awal 0
         xn = float(input("Masukkan nilai x akhir: "))  
@@ -552,6 +553,8 @@ Penggunaan Metode Euler dalam suatu fungsi untuk suatu proses integrasi. Berikut
         
   #Untuk menentukan nilai error      
         error = G-y
+        
+  #Pembuatan Grafik      
         print(error)
         judul = ("\n Grafik Pendekatan Persamaan Differensial Biasa Dengan Metode Euler \n\n %s_%s_%s \n" % (Nama,Nim,Kelas))
         plt.figure(figsize = (12, 10))
