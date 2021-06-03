@@ -165,7 +165,11 @@ return x
 ```
 
 ### 3.3. Modul 4 : Integrasi Numerik
+Metode Integrasi Numerik merupakan integrasi tertentu yang didasarkan pada hitungan perkiraan dengan mendekatinya melalui fungsi polinomial dengan data yang tersedia.
+
+
 * #### Metode Trapesium Satu Pias
+Metode Integrasi Trapesium merupakan salah satu metode integrasi numerik untuk menghitung luasan kurva f(x) dengan batasan tertentu yang didekati dengan sebagai luasan trapesium. Metode Trapesium Satu Pias digunakan apabila terdapat dua data f (a) dan f (b).
 
 ```
 def trapesium_1pias():
@@ -200,6 +204,8 @@ def trapesium_1pias():
         print("Luas dengan metode trapesium 1 pias:", L)
 ```
 * #### Metode Trapesium Banyak Pias
+Metode Trapesium Banyak Pias merupakan modifikasi dari metode trapesium satu pias. Modifikasi dilakukan dengan memperbanyak pias yang digunakan, yang artinya memperbanyak jumlah trapesium yang digunakan, hal ini bertujuan untuk mengestimasi luas daerah yang ingin dicari. Metode Trapesium Banyak Pias ini digunakan jika tersedia lebih dari dua data yang dapat dilakukan dengan lebih dari satu trapesium.
+
 ```
 # PERSAMAAN 2X^3+4X^2+10
 
@@ -227,7 +233,12 @@ def trapesium_banyakpias(f,a,b,N):
     X = np.linspace(a,b+1,N)
     Y = f(X)
 ```
-* ###### Metode Simspson 1/3
+
+Metode Trapesium dengan Banyak Pias menghasilkan estimasi atau keakurasian perhitungan yang lebih baik, dibandingkan dengan Metode Trapesium Satu Pias. Karena memiliki nilai errror yang lebih kecil.
+
+* #### Metode Simspson 1/3
+Metode simpson 1/3 adalah metode yang mencocokkan polinomial derajat2 pada tiga titik data diskrit yang mempunyai jarak yang sama. Hampiran nilaiintegrasi yang lebih baik dapat ditingkatkan dengan menggunakan polinominterpolasi berderajat yang lebih tinggi.
+
 ```
 #Pendefinisian fungsi
 def simpson1per3(x0,xn,n):
@@ -243,6 +254,14 @@ def simpson1per3(x0,xn,n):
         integral = integral * h / 3
         return integral
 ```
+
+* #### Metode Simspson 3/8
+Metode Simspson 3/8 merupakan metode yang sama halnya dengan metode Simpson 1/3, hampiran nilai integrasi yanglebih teliti dapat ditingkatkan terus dengan mengunakan polinom interpolasi berderajat lebih tinggi pula. Misalkan sekarang fungsi f(x) hampiri dengan polinom interpolasi derajat 3. 
+
+Keakurasin Metode Simspson 3/8 lebih teliti dari Metode Simspson 1/3, hal ini dikarenakan Metode Simspson 3/8 memiliki polinomial interpolasi berderajat yang lebih tinggi pula.
+
+Untuk Keakurasian Metode Trapesium dan Metode Simspson, Metode Simspson jauh lebih teliti dan lebih baik, hal ini dikarenakan galatnya lebih tinggi.
+
 ### 3.4. Modul 5 : Persamaan Diferensial Biasa
 * #### Metode Euler
 
