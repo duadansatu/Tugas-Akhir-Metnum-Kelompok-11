@@ -41,50 +41,59 @@ plt.savefig(r'C:\Users\asus\Documents\KULIAH\Sem 4\METNUM\Kelompok 11\image\**Na
 * #### Metode Setengah Interval
 Metode Setengah Interval merupakan suatu metode bagi dua dimana akar penyelesaian metode ini adalah jumlah interval batas bawah dengan interval batas atas bagi 2. Metode ini merupakan bentuk paling sederhana diantara beberapa metode lainnya. Kelebihan dari metode ini adalah selalu berhasil dalam menentukan akar-akar (solusi) yang dicari atau dengan kata lain selalu konvergen. Untuk melakukan perhitungan dengan metode ini maka hitung fungsu pada interval yang sama dai x sampai pada tanda fungsi f(Xi) dan (fXi+1), yaitu apabila f(Xi)× (fXi+1)<0. Perkirakan pertama dari akar Xt dan dihitung rerata nilai Xi dan Xi+1 , ytiu Xt = (Xi + Xi+1)/2. Lalu buat evaluasi dimana apabila f(Xi)× (fXi+1)<0, akar persamaan berada pada sub interval pertama dimana Xt=Xi+1 , apabila f(Xi)× (fXi+1)>0, maka akar persamaan pada sub bab interval kedua dimana Xt=Xi, dan apabila f(Xi)× (fXi+1)=0 maka akar persamaan adalah Xt dan perhitungan selesai. Apabila ternyata nilai yang diperoleh f(Xi)× (fXi+1)<0 dan f(Xi)× (fXi+1)>0, maka hitung perkiraan baru Xt = (Xi + Xi+1)/2. Jika perkiraan baru ternyata sudah kecil atau sesuai batasan yang ditentukan,maka hitungan selesai dan Xt adalah akar persamaan yang dicari. Proses iterasi berhenti jika toleransi kesalahan yang diberikan dalam soal sudah terpenuhi dan setelah menjalankan jumlah tertentu dari iterasi dan jumlahnya sudah ditentukan dalam soal yang diberikan.
 
+Pendefenisian metode setengah interval
 ```
-def metnum_modul2():
-    def setengah_interval (X1,X2):
-        print(" =========================================================\n",
-             "Modul 2 Akar-Akar Persamaan: Metode Setengah Interval\n",
-             "KELOMPOK 11 \n",
-             "OSEANOGRAFI 2019 \n",
-             "PRAKTIKUM METODE NUMERIK 2021 \n",
-             "=========================================================\n")
-        X1 = X1
-        X2 = X2
-        error = 1
-        iterasi = 0
-        while(error > 0.0001):
-            iterasi +=1
-            FXi = (float(-0.0371*(X1**3)))+(float(1.5072*(X1**2)))-(9.9433*X1)+(-14.997)
-            FXii = (float(-0.0371*(X2**3)))+(float(1.5072*(X2**2)))-(9.9433*X2)+(-14.997)
-            Xt = (X1 + X2)/2
-            FXt = (float(-0.0371*(Xt**3)))+(float(1.5072*(Xt**2)))-(9.9433*Xt)+(-14.997)
-            if FXi * FXt > 0:
-                X1 = Xt
-            elif FXi * FXt < 0:
-                X2 = Xt
-            else:
-                print("Akar Penyelesaian: ", Xt) 
-            if FXt < 0:
-                error = FXt * (-1)
-            else:
-                error = FXt
-            if iterasi > 100:
-                print("Angka tak hingga")
-                break
-            print(iterasi, "|", FXi, "|", FXii, "|", Xt, "|", FXt, "|", error)
-        print("Jumlah Iterasi: ", iterasi)
-        print("Akar persamaan adalah: ", Xt)
-        print("Toleransi Error: ", error)
+def setengah_interval (X1,X2):
+    print(" =========================================================\n",
+         "Modul 2 Akar-Akar Persamaan: Metode Setengah Interval\n",
+         "KELOMPOK 11 \n",
+         "OSEANOGRAFI 2019 \n",
+         "PRAKTIKUM METODE NUMERIK 2021 \n",
+         "=========================================================\n")
+    X1 = X1
+    X2 = X2
+    error = 1
+    iterasi = 0
+```
+Looping untuk iterasi dari metode setengah interval
+```
+while(error > 0.0001):
+    iterasi +=1
+```
+Kondisi untuk perhitungan metode setengah interval
+```
+FXi = (float(-0.0371*(X1**3)))+(float(1.5072*(X1**2)))-(9.9433*X1)+(-14.997)
+FXii = (float(-0.0371*(X2**3)))+(float(1.5072*(X2**2)))-(9.9433*X2)+(-14.997)
+Xt = (X1 + X2)/2
+FXt = (float(-0.0371*(Xt**3)))+(float(1.5072*(Xt**2)))-(9.9433*Xt)+(-14.997)
+if FXi * FXt > 0:
+   X1 = Xt
+elif FXi * FXt < 0:
+     X2 = Xt
+else:
+    print("Akar Penyelesaian: ", Xt) 
+if FXt < 0:
+    error = FXt * (-1)
+else:
+    error = FXt
+if iterasi > 100:
+   print("Angka tak hingga")
+   break
+print(iterasi, "|", FXi, "|", FXii, "|", Xt, "|", FXt, "|", error)
+```
+Perintah untuk print hasil metode setengah interval
+```
+print("Jumlah Iterasi: ", iterasi)
+print("Akar persamaan adalah: ", Xt)
+print("Toleransi Error: ", error)
  ```
  
 * #### Metode Interpolasi Linier
 Metode Interpolasi Linier atau dikenal *false position* merupakan metode dimana didasarkan pada interpolasi antara dua nilai dari fungsi yang mempunyai tanda berlawanan. Metode Interpolasi Linier merupakan penyempurna dari metode setnegah interval sehingga hampir mirip dimana diperlukan dua harga taksiran awal pada awal pengurungan akar persamaan. Perbedaan kedua metode tersebut terletak pada proses pencarian pendekatan akar persamaan selanjutnya setelah pendekatan akar saat ini ditemukan Prinsip pencarian akar persamaan dari metode ini didasarkan pada penggunaan interpolasi linier. Interpolasi linier dilakukan melalui dua titik pertama dengan garis interpolasi memotong sumbu x dan dititik perpotongan tersebut didapatkan pendekatan akar yang pertama.
 Kemudian pendekatan tersebut dievaluasi pada fungsi nonlinier sehingga diperoleh titik pada fungsi nonlinier tersebut. Kemudian dilakukan lagi interpolasi melalui ujung sebelumnya diperoleh pendekatan akar berikutnya. Demikian seterusnya, hingga diperoleh hargapendekatan akar yang sudah sangat dekat dengan akar persamaan eksaknya.
 
+Pendefenisian metode interpolasi linear
 ```
-
 def interpolasi_linier(X1):
             print(" =========================================================\n",
                   "Modul 2 Akar-Akar Persamaan: Metode Interpolasi Linier \n",
@@ -96,29 +105,38 @@ def interpolasi_linier(X1):
             X2 = X1 + 1
             error = 1
             iterasi = 0
-            while(error > 0.0001):
-                iterasi +=1
-                FX1 = (float(-0.0371*(X1**3)))+(float(1.5072*(X1**2)))-(9.9433*X1)+(-14.997)
-                FX2 = (float(-0.0371*(X2**3)))+(float(1.5072*(X2**2)))-(9.9433*X2)+(-14.997)
-                Xt = X2 - ((FX2/(FX2-FX1)))*(X2-X1)
-                FXt = (float(-0.0371*(Xt**3)))+(float(1.5072*(Xt**2)))-(9.9433*Xt)+(-14.997)
-                if FXt*FX1 > 0:
-                    X2 = Xt
-                    FX2 = FXt
-                else:
-                    X1 = Xt
-                    FX1 = FXt 
-                if FXt < 0:
-                    error = FXt * (-1)
-                else:
-                    error = FXt
-                if iterasi > 500:
-                    print("Angka tak hingga")
-                    break
-                print(iterasi, "|", FX1, "|", FX2, "|", Xt, "|", FXt, "|", error)
-            print("Jumlah Iterasi: ", iterasi)
-            print("Akar persamaan adalah: ", Xt)
-            print("Toleransi Error: ", error)
+```
+Looping untuk iterasi metode interpolasi linear berdasarkan nilai error
+```
+while(error > 0.0001):
+     iterasi +=1
+     FX1 = (float(-0.0371*(X1**3)))+(float(1.5072*(X1**2)))-(9.9433*X1)+(-14.997)
+     FX2 = (float(-0.0371*(X2**3)))+(float(1.5072*(X2**2)))-(9.9433*X2)+(-14.997)
+     Xt = X2 - ((FX2/(FX2-FX1)))*(X2-X1)
+     FXt = (float(-0.0371*(Xt**3)))+(float(1.5072*(Xt**2)))-(9.9433*Xt)+(-14.997)
+```
+Kondisi dalam perhitungan metode interpolasi linear
+```
+if FXt*FX1 > 0:
+   X2 = Xt
+   FX2 = FXt
+else:
+   X1 = Xt
+   FX1 = FXt 
+if FXt < 0:
+   error = FXt * (-1)
+else:
+   error = FXt
+if iterasi > 500:
+   print("Angka tak hingga")
+   break
+print(iterasi, "|", FX1, "|", FX2, "|", Xt, "|", FXt, "|", error
+```
+Perintah untuk print hasil metode interpolasi linear
+```
+print("Jumlah Iterasi: ", iterasi)
+print("Akar persamaan adalah: ", Xt)
+print("Toleransi Error: ", error)
             
  ```
  
