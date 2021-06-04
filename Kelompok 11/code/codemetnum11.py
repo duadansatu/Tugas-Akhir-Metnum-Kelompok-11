@@ -506,8 +506,8 @@ def metnum_modul5():
         print(error)
         judul = ("\n Grafik Pendekatan Persamaan Differensial Biasa Dengan Metode Euler \n\n %s_%s_%s \n" % (Nama,Nim,Kelas))
         plt.figure(figsize = (12, 10))
-        plt.plot(x, y, 'b--', color='r', label='Hasil Pendekatan')
-        plt.plot(x, G, '-g', color='y', label='Hasil Analitik')
+        plt.plot(x, y, 'r--', label='Hasil Pendekatan')
+        plt.plot(x, G, '-c', label='Hasil Analitik')
         plt.title(judul) #Judul Plot
         plt.xlabel('x') #sumbu x
         plt.ylabel('F(x)') #sumbu y
